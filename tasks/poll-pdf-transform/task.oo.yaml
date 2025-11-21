@@ -1,0 +1,38 @@
+title: "Poll PDF to EPUB Progress"
+icon: ":carbon:progress-bar:"
+description: "Poll the PDF to EPUB transformation progress using the session ID.
+  Returns the current state and download URL when completed."
+
+inputs_def:
+  - handle: session_id
+    description: "The session ID returned from the PDF to EPUB submit task"
+    json_schema:
+      type: string
+    nullable: false
+
+  - handle: poll_interval
+    description: "Polling interval in seconds"
+    json_schema:
+      type: number
+    value: 3
+    nullable: false
+
+  - handle: max_attempts
+    description: "Maximum number of polling attempts before timeout"
+    json_schema:
+      type: number
+    value: 100
+    nullable: false
+
+outputs_def:
+  - handle: download_url
+    description: "The download URL for the converted EPUB file"
+    json_schema:
+      type: string
+
+executor:
+  name: python
+  options:
+    entry: __init__.py
+    spawn: false
+private: true

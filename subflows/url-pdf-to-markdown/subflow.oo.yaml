@@ -1,0 +1,43 @@
+title: "Url Pdf To Markdown"
+
+nodes:
+  - node_id: poll-pdf-to-markdown#1
+    title: "Poll PDF to Markdown Progress #1"
+    inputs_from:
+      - handle: session_id
+        from_node:
+          - node_id: pdf-to-markdown#1
+            output_handle: session_id
+      - handle: poll_interval
+        value: 3
+      - handle: max_attempts
+        value: 100
+    task: self::poll-pdf-to-markdown
+  - node_id: pdf-to-markdown#1
+    title: "PDF to Markdown Submit #1"
+    inputs_from:
+      - handle: pdf_url
+        from_flow:
+          - input_handle: pdf_url
+      - handle: model
+        value: gundam
+    task: self::pdf-to-markdown
+inputs_def:
+  - handle: pdf_url
+    json_schema:
+      type: string
+    nullable: false
+    description: The URL of the PDF file to convert
+    executor_name: python
+outputs_def:
+  - handle: download_url
+    json_schema:
+      type: string
+    nullable: false
+    description: The download URL for the converted EPUB file
+    executor_name: python
+outputs_from:
+  - handle: download_url
+    from_node:
+      - node_id: poll-pdf-to-markdown#1
+        output_handle: download_url

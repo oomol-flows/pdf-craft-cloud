@@ -1,0 +1,69 @@
+{
+  "nodes": {
+    "upload-to-cloud#1": {
+      "rfNode": {
+        "position": {
+          "x": 486,
+          "y": 27
+        }
+      }
+    },
+    "file-downloader#1": {
+      "rfNode": {
+        "position": {
+          "x": 1944,
+          "y": 49
+        }
+      },
+      "sections": {
+        "inputs": {
+          "groupCollapsed": {
+            "Strategy": true,
+            "Connection": true
+          }
+        },
+        "outputs": {
+          "collapsed": {
+            "on_task_failed_with_retry_error": {
+              "[]": true
+            }
+          }
+        }
+      }
+    },
+    "pdf-to-markdown#1": {
+      "rfNode": {
+        "position": {
+          "x": 972,
+          "y": 13.5
+        }
+      }
+    },
+    "poll-pdf-to-markdown#1": {
+      "rfNode": {
+        "position": {
+          "x": 1458,
+          "y": 0
+        }
+      }
+    }
+  },
+  "pseudoNodes": {
+    "input": {
+      "rfNode": {
+        "position": {
+          "x": 0,
+          "y": 161.5
+        }
+      }
+    },
+    "output": {
+      "rfNode": {
+        "position": {
+          "x": 2430,
+          "y": 175
+        }
+      }
+    }
+  }
+}

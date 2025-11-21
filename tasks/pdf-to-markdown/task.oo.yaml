@@ -1,0 +1,31 @@
+title: "PDF to Markdown Submit"
+icon: ":carbon:document-pdf:"
+description: "Submit a PDF file URL to convert it to Markdown format. Returns a
+  session ID for tracking the conversion progress."
+
+inputs_def:
+  - handle: pdf_url
+    description: "The URL of the PDF file to convert"
+    json_schema:
+      type: string
+    nullable: false
+
+  - handle: model
+    description: "The model to use for conversion"
+    json_schema:
+      type: string
+    value: "gundam"
+    nullable: false
+
+outputs_def:
+  - handle: session_id
+    description: "The session ID for tracking the conversion progress"
+    json_schema:
+      type: string
+
+executor:
+  name: python
+  options:
+    entry: __init__.py
+    spawn: false
+private: true

@@ -1,0 +1,46 @@
+title: "Url Pdf To Epub"
+
+nodes:
+  - node_id: pdf-to-epub#1
+    title: "Submit PDF Conversion"
+    task: self::pdf-to-epub-submit
+    inputs_from:
+      - handle: pdf_url
+        from_flow:
+          - input_handle: pdf_url
+        from_node:
+          []
+      - handle: model
+        value: gundam
+
+  - node_id: poll-pdf-transform#1
+    title: "Poll Conversion Progress"
+    task: self::poll-pdf-transform
+    inputs_from:
+      - handle: session_id
+        from_node:
+          - node_id: pdf-to-epub#1
+            output_handle: session_id
+      - handle: poll_interval
+        value: 3
+      - handle: max_attempts
+        value: 100
+inputs_def:
+  - handle: pdf_url
+    json_schema:
+      type: string
+    nullable: false
+    description: The URL of the PDF file to convert
+    executor_name: python
+outputs_def:
+  - handle: download_url
+    json_schema:
+      type: string
+    nullable: false
+    description: The download URL for the converted EPUB file
+    executor_name: python
+outputs_from:
+  - handle: download_url
+    from_node:
+      - node_id: poll-pdf-transform#1
+        output_handle: download_url
