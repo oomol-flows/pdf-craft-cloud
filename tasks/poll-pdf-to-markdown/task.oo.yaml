@@ -1,24 +1,23 @@
-title: "Poll PDF to Markdown Progress"
+title: "%poll-pdf-to-markdown-progress%"
 icon: ":carbon:progress-bar:"
-description: "Poll the PDF to Markdown transformation progress using the session
-  ID. Returns the download URL when completed."
+description: "%poll-the-pdf-to-markdown-transformation-progress-using-the-sessi%"
 
 inputs_def:
   - handle: session_id
-    description: "The session ID returned from the PDF to Markdown submit task"
+    description: "%the-session-id-returned-from-the-pdf-to-markdown-submit-task%"
     json_schema:
       type: string
     nullable: false
 
   - handle: poll_interval
-    description: "Polling interval in seconds"
+    description: "%polling-interval-in-seconds%"
     json_schema:
       type: number
     value: 5
     nullable: false
 
   - handle: max_attempts
-    description: "Maximum number of polling attempts before timeout"
+    description: "%maximum-number-of-polling-attempts-before-timeout%"
     json_schema:
       type: number
     value: 60
@@ -26,7 +25,7 @@ inputs_def:
 
 outputs_def:
   - handle: download_url
-    description: "The download URL for the converted Markdown file"
+    description: "%the-download-url-for-the-converted-markdown-file%"
     json_schema:
       type: string
 

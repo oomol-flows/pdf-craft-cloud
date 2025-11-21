@@ -1,25 +1,24 @@
-title: "PDF to Markdown Submit"
+title: "%pdf-to-markdown-submit%"
 icon: ":carbon:document-pdf:"
-description: "Submit a PDF file URL to convert it to Markdown format. Returns a
-  session ID for tracking the conversion progress."
+description: "%submit-a-pdf-file-url-to-convert-it-to-markdown-format-returns-a%"
 
 inputs_def:
   - handle: pdf_url
-    description: "The URL of the PDF file to convert"
+    description: "%the-url-of-the-pdf-file-to-convert2%"
     json_schema:
       type: string
     nullable: false
 
   - handle: model
-    description: "The model to use for conversion"
+    description: "%the-model-to-use-for-conversion2%"
     json_schema:
       type: string
-    value: "gundam"
+    value: gundam
     nullable: false
 
 outputs_def:
   - handle: session_id
-    description: "The session ID for tracking the conversion progress"
+    description: "%the-session-id-for-tracking-the-conversion-progress2%"
     json_schema:
       type: string
 

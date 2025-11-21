@@ -1,11 +1,11 @@
-title: "File Pdf To Markdown"
-description: "Convert local PDF file to Markdown format with automatic upload and download"
+title: "%file-pdf-to-markdown%"
+description: "%convert-local-pdf-file-to-markdown-format-with-automatic-upload%"
 
 nodes:
 
   - node_id: upload-to-cloud#1
-    title: "Upload PDF to Cloud"
-    description: "Upload local PDF file to cloud storage"
+    title: "%upload-pdf-to-cloud2%"
+    description: "%upload-local-pdf-file-to-cloud-storage%"
     task: upload-to-cloud::upload-to-cloud
     inputs_from:
       - handle: file
@@ -13,8 +13,8 @@ nodes:
         from_flow:
           - input_handle: file
   - node_id: file-downloader#1
-    title: "Download Markdown File"
-    description: "Download converted Markdown file to local path"
+    title: "%download-markdown-file%"
+    description: "%download-converted-markdown-file-to-local-path%"
     inputs_from:
       - handle: url
         from_node:
@@ -51,8 +51,8 @@ nodes:
         value: 0
     subflow: downloader::file-downloader
   - node_id: pdf-to-markdown#1
-    title: "Submit PDF to Markdown"
-    description: "Submit uploaded PDF URL to Markdown conversion service"
+    title: "%submit-pdf-to-markdown%"
+    description: "%submit-uploaded-pdf-url-to-markdown-conversion-service%"
     inputs_from:
       - handle: pdf_url
         from_node:
@@ -62,8 +62,8 @@ nodes:
         value: gundam
     task: self::pdf-to-markdown
   - node_id: poll-pdf-to-markdown#1
-    title: "Poll Conversion Progress"
-    description: "Poll until conversion completes and return download URL"
+    title: "%poll-conversion-progress2%"
+    description: "%poll-until-conversion-completes-and-return-download-url%"
     inputs_from:
       - handle: session_id
         from_node:
@@ -97,11 +97,11 @@ inputs_def:
     executor_name: python
 outputs_def:
   - handle: saved_path
+    description: "%path-of-the-successfully-downloaded-file2%"
     json_schema:
       type: string
       ui:widget: save
     nullable: false
-    description: Path of the successfully downloaded file
     executor_name: python
 outputs_from:
   - handle: saved_path

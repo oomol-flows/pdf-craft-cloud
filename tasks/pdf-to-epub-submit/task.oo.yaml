@@ -1,30 +1,29 @@
-title: "PDF to EPUB Submit"
+title: "%pdf-to-epub-submit%"
 icon: ":carbon:document-pdf:"
-description: "Submit a PDF file URL to convert it to EPUB format. Returns a
-  session ID for tracking the conversion progress."
+description: "%submit-a-pdf-file-url-to-convert-it-to-epub-format-returns-a-ses%"
 
 inputs_def:
   - handle: pdf_url
-    description: "The URL of the PDF file to convert"
+    description: "%the-url-of-the-pdf-file-to-convert%"
     json_schema:
       type: string
     nullable: false
 
   - handle: model
-    description: "The model to use for conversion"
+    description: "%the-model-to-use-for-conversion%"
     json_schema:
       type: string
-    value: "gundam"
+    value: gundam
     nullable: false
 
 outputs_def:
   - handle: success
-    description: "Whether the submission was successful"
+    description: "%whether-the-submission-was-successful%"
     json_schema:
       type: boolean
 
   - handle: session_id
-    description: "The session ID for tracking the conversion progress"
+    description: "%the-session-id-for-tracking-the-conversion-progress%"
     json_schema:
       type: string
 

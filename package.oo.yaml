@@ -8,8 +8,7 @@ dependencies:
   downloader: 0.1.1
 icon: ./icon.png
 name: pdf_craft_cloud
-displayName: PDF Craft Cloud
-description: Cloud-based PDF conversion toolkit that transforms PDF documents
-  into EPUB and Markdown formats with automatic upload and download
+displayName: "%display-name%"
+description: "%description%"
 repository: https://github.com/oomol-flows/pdf-craft-cloud.git
 releaseNotes: init

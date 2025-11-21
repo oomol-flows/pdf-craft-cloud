@@ -1,10 +1,10 @@
-title: "Url Pdf To Epub"
-description: "Convert PDF from URL to EPUB format via cloud service"
+title: "%url-pdf-to-epub%"
+description: "%convert-pdf-from-url-to-epub-format-via-cloud-service%"
 
 nodes:
   - node_id: pdf-to-epub#1
-    title: "Submit PDF Conversion"
-    description: "Submit PDF URL to cloud conversion service"
+    title: "%submit-pdf-conversion2%"
+    description: "%submit-pdf-url-to-cloud-conversion-service%"
     task: self::pdf-to-epub-submit
     inputs_from:
       - handle: pdf_url
@@ -16,8 +16,8 @@ nodes:
         value: gundam
 
   - node_id: poll-pdf-transform#1
-    title: "Poll Conversion Progress"
-    description: "Poll until conversion completes and return download URL"
+    title: "%poll-conversion-progress3%"
+    description: "%poll-until-conversion-completes-and-return-download-url2%"
     task: self::poll-pdf-transform
     inputs_from:
       - handle: session_id
@@ -30,17 +30,17 @@ nodes:
         value: 100
 inputs_def:
   - handle: pdf_url
+    description: "%the-url-of-the-pdf-file-to-convert3%"
     json_schema:
       type: string
     nullable: false
-    description: The URL of the PDF file to convert
     executor_name: python
 outputs_def:
   - handle: download_url
+    description: "%the-download-url-for-the-converted-epub-file2%"
     json_schema:
       type: string
     nullable: false
-    description: The download URL for the converted EPUB file
     executor_name: python
 outputs_from:
   - handle: download_url

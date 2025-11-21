@@ -1,10 +1,10 @@
-title: "Url Pdf To Markdown"
-description: "Convert PDF from URL to Markdown format via cloud service"
+title: "%url-pdf-to-markdown%"
+description: "%convert-pdf-from-url-to-markdown-format-via-cloud-service%"
 
 nodes:
   - node_id: poll-pdf-to-markdown#1
-    title: "Poll Conversion Progress"
-    description: "Poll until conversion completes and return download URL"
+    title: "%poll-conversion-progress4%"
+    description: "%poll-until-conversion-completes-and-return-download-url3%"
     inputs_from:
       - handle: session_id
         from_node:
@@ -16,8 +16,8 @@ nodes:
         value: 100
     task: self::poll-pdf-to-markdown
   - node_id: pdf-to-markdown#1
-    title: "Submit PDF to Markdown"
-    description: "Submit PDF URL to Markdown conversion service"
+    title: "%submit-pdf-to-markdown2%"
+    description: "%submit-pdf-url-to-markdown-conversion-service%"
     inputs_from:
       - handle: pdf_url
         from_flow:
@@ -27,17 +27,17 @@ nodes:
     task: self::pdf-to-markdown
 inputs_def:
   - handle: pdf_url
+    description: "%the-url-of-the-pdf-file-to-convert4%"
     json_schema:
       type: string
     nullable: false
-    description: The URL of the PDF file to convert
     executor_name: python
 outputs_def:
   - handle: download_url
+    description: "%the-download-url-for-the-converted-epub-file3%"
     json_schema:
       type: string
     nullable: false
-    description: The download URL for the converted EPUB file
     executor_name: python
 outputs_from:
   - handle: download_url
