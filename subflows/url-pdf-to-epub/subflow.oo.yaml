@@ -1,8 +1,10 @@
 title: "Url Pdf To Epub"
+description: "Convert PDF from URL to EPUB format via cloud service"
 
 nodes:
   - node_id: pdf-to-epub#1
     title: "Submit PDF Conversion"
+    description: "Submit PDF URL to cloud conversion service"
     task: self::pdf-to-epub-submit
     inputs_from:
       - handle: pdf_url
@@ -15,6 +17,7 @@ nodes:
 
   - node_id: poll-pdf-transform#1
     title: "Poll Conversion Progress"
+    description: "Poll until conversion completes and return download URL"
     task: self::poll-pdf-transform
     inputs_from:
       - handle: session_id

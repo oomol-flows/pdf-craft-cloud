@@ -1,9 +1,11 @@
 title: "File Pdf To Markdown"
+description: "Convert local PDF file to Markdown format with automatic upload and download"
 
 nodes:
 
   - node_id: upload-to-cloud#1
     title: "Upload PDF to Cloud"
+    description: "Upload local PDF file to cloud storage"
     task: upload-to-cloud::upload-to-cloud
     inputs_from:
       - handle: file
@@ -11,7 +13,8 @@ nodes:
         from_flow:
           - input_handle: file
   - node_id: file-downloader#1
-    title: "下载文件 #1"
+    title: "Download Markdown File"
+    description: "Download converted Markdown file to local path"
     inputs_from:
       - handle: url
         from_node:
@@ -48,7 +51,8 @@ nodes:
         value: 0
     subflow: downloader::file-downloader
   - node_id: pdf-to-markdown#1
-    title: "PDF to Markdown Submit #1"
+    title: "Submit PDF to Markdown"
+    description: "Submit uploaded PDF URL to Markdown conversion service"
     inputs_from:
       - handle: pdf_url
         from_node:
@@ -58,7 +62,8 @@ nodes:
         value: gundam
     task: self::pdf-to-markdown
   - node_id: poll-pdf-to-markdown#1
-    title: "Poll PDF to Markdown Progress #1"
+    title: "Poll Conversion Progress"
+    description: "Poll until conversion completes and return download URL"
     inputs_from:
       - handle: session_id
         from_node:

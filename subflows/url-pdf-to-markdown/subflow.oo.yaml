@@ -1,8 +1,10 @@
 title: "Url Pdf To Markdown"
+description: "Convert PDF from URL to Markdown format via cloud service"
 
 nodes:
   - node_id: poll-pdf-to-markdown#1
-    title: "Poll PDF to Markdown Progress #1"
+    title: "Poll Conversion Progress"
+    description: "Poll until conversion completes and return download URL"
     inputs_from:
       - handle: session_id
         from_node:
@@ -14,7 +16,8 @@ nodes:
         value: 100
     task: self::poll-pdf-to-markdown
   - node_id: pdf-to-markdown#1
-    title: "PDF to Markdown Submit #1"
+    title: "Submit PDF to Markdown"
+    description: "Submit PDF URL to Markdown conversion service"
     inputs_from:
       - handle: pdf_url
         from_flow:

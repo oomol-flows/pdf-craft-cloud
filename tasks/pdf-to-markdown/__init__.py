@@ -4,7 +4,7 @@ class Inputs(typing.TypedDict):
     pdf_url: str
     model: str
 class Outputs(typing.TypedDict):
-    session_id: str
+    session_id: typing.NotRequired[str]
 #endregion
 
 from oocana import Context

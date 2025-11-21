@@ -5,7 +5,7 @@ class Inputs(typing.TypedDict):
     poll_interval: float
     max_attempts: float
 class Outputs(typing.TypedDict):
-    download_url: str
+    download_url: typing.NotRequired[str]
 #endregion
 
 from oocana import Context
