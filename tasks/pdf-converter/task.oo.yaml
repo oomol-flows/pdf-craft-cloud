@@ -1,0 +1,59 @@
+title: "%pdf-converter-title%"
+icon: ":carbon:document-pdf:"
+description: "%pdf-converter-description%"
+
+inputs_def:
+  - handle: pdf_url
+    description: "%pdf-converter-pdf-url%"
+    json_schema:
+      type: string
+    nullable: false
+
+  - handle: output_format
+    description: "%pdf-converter-output-format%"
+    json_schema:
+      enum:
+        - markdown
+        - epub
+      ui:options:
+        labels:
+          - Markdown
+          - EPUB
+    value: markdown
+    nullable: false
+
+  - group: Advanced Options
+    collapsed: true
+
+  - handle: model
+    description: "%pdf-converter-model%"
+    json_schema:
+      type: string
+    value: gundam
+    nullable: true
+
+  - handle: poll_interval
+    description: "%pdf-converter-poll-interval%"
+    json_schema:
+      type: number
+    value: 3
+    nullable: true
+
+  - handle: max_attempts
+    description: "%pdf-converter-max-attempts%"
+    json_schema:
+      type: number
+    value: 2400
+    nullable: true
+
+outputs_def:
+  - handle: download_url
+    description: "%pdf-converter-download-url%"
+    json_schema:
+      type: string
+
+executor:
+  name: python
+  options:
+    entry: __init__.py
+    spawn: false
