@@ -1,6 +1,6 @@
 {
   "display-name": "PDF Craft 云",
-  "description": "基于云的 PDF 转换工具包，可将 PDF 文档转换为 EPUB 和 Markdown 格式，并支持自动上传和下载",
+  "description": "自动将 PDF 文档转换为易于阅读的电子书或可编辑的文本格式，非常适合随时随地阅读或重新利用内容",
   "pdf-converter-title": "PDF 转换器",
   "pdf-converter-description": "将 PDF 文件转换为 Markdown 或 EPUB 格式，自动处理并监控进度",
   "pdf-converter-pdf-url": "要转换的 PDF 文件的 URL",

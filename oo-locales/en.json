@@ -1,6 +1,6 @@
 {
   "display-name": "PDF Craft Cloud",
-  "description": "Cloud-based PDF conversion toolkit that transforms PDF documents into EPUB and Markdown formats with automatic upload and download",
+  "description": "Transform PDF documents into easy-to-read e-books or editable text formats automatically, perfect for reading on the go or repurposing content",
   "pdf-converter-title": "PDF Converter",
   "pdf-converter-description": "Converts PDF files to Markdown or EPUB format with automatic processing and progress monitoring",
   "pdf-converter-pdf-url": "URL of the PDF file to convert",
