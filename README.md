@@ -1,78 +1,50 @@
 # PDF Craft Cloud
 
-A cloud-based PDF conversion toolkit that transforms PDF documents into EPUB and Markdown formats using OOMOL's cloud services.
+Transform your PDF documents into formats that are easier to read, edit, and share. Whether you want to read PDFs on your e-reader or edit them as text, PDF Craft Cloud handles the conversion for you automatically.
 
-## Features
+## What Can You Do?
 
-- **PDF to EPUB Conversion**: Convert PDF documents to EPUB e-book format
-- **PDF to Markdown Conversion**: Convert PDF documents to Markdown format
-- **Multiple Input Sources**: Support both local files and URL-based PDFs
-- **Automatic File Handling**: Upload, convert, and download files automatically
+### Turn PDFs into E-Books
+Convert any PDF document into an EPUB file that you can read on your Kindle, iPad, or any e-reader device. Perfect for reading research papers, reports, or books on the go.
 
-## Subflows
+### Convert PDFs to Editable Text
+Transform PDF documents into Markdown format, making it easy to edit content, extract information, or repurpose the text for your own projects. Great for taking notes from articles, adapting content for presentations, or creating documentation.
 
-### File PDF to EPUB
-Convert a local PDF file to EPUB format with automatic upload and download.
+## How It Works
 
-**Inputs:**
-- `file`: Local PDF file path
-- `saved_path`: Output path for the EPUB file (optional)
+PDF Craft Cloud offers a simple "PDF Converter" tool that does all the heavy lifting:
 
-**Outputs:**
-- `saved_path`: Path of the downloaded EPUB file
+1. **Point to Your PDF**: Tell it where your PDF is - either by providing a web link or uploading a file from your computer
+2. **Choose Your Format**: Pick whether you want an EPUB e-book or Markdown text file
+3. **Let It Run**: The converter automatically handles everything - it processes your PDF and gives you back the converted file
 
-### URL PDF to EPUB
-Convert a PDF from URL to EPUB format via cloud service.
+That's it! No complicated steps or settings to worry about.
 
-**Inputs:**
-- `pdf_url`: URL of the PDF file to convert
+## Common Ways to Use It
 
-**Outputs:**
-- `download_url`: Download URL for the converted EPUB file
+**Reading on the Go**
+- Convert lengthy PDF reports into EPUB format
+- Transfer to your e-reader for comfortable reading anywhere
+- Enjoy better text reflowing and font size control than standard PDFs
 
-### File PDF to Markdown
-Convert a local PDF file to Markdown format with automatic upload and download.
+**Content Editing and Repurposing**
+- Turn PDF articles into editable Markdown text
+- Extract and modify content for your own documents
+- Pull out quotes or sections without retyping
 
-**Inputs:**
-- `file`: Local PDF file path
-- `saved_path`: Output path for the Markdown file (optional)
+**Document Processing Workflows**
+- You might consider using this with document organizers to automatically convert and file PDFs
+- Often works well with text analysis tools if you need to process PDF content
+- Can be combined with note-taking systems to capture information from PDF sources
 
-**Outputs:**
-- `saved_path`: Path of the downloaded Markdown file
+## What You'll Need
 
-### URL PDF to Markdown
-Convert a PDF from URL to Markdown format via cloud service.
+This tool works with two helpful companions:
+- A way to store files temporarily during conversion
+- A downloader to retrieve your converted files
 
-**Inputs:**
-- `pdf_url`: URL of the PDF file to convert
+Both of these work automatically in the background - you don't need to worry about managing them.
 
-**Outputs:**
-- `download_url`: Download URL for the converted Markdown file
+## Getting Started
 
-## Task Blocks
-
-| Task | Description |
-|------|-------------|
-| PDF to EPUB Submit | Submit a PDF URL to the conversion service and get a session ID |
-| PDF to Markdown Submit | Submit a PDF URL to the Markdown conversion service and get a session ID |
-| Poll PDF to EPUB Progress | Poll conversion progress and return download URL when complete |
-| Poll PDF to Markdown Progress | Poll conversion progress and return download URL when complete |
-
-## Usage
-
-1. **For local PDF files**: Use "File PDF to EPUB" or "File PDF to Markdown" subflows
-2. **For PDF URLs**: Use "URL PDF to EPUB" or "URL PDF to Markdown" subflows
-
-The conversion process is fully automated - files are uploaded to cloud storage, converted via the cloud service, and downloaded to your specified location.
-
-## Dependencies
-
-- `upload-to-cloud`: Cloud storage upload functionality
-- `downloader`: File download functionality
-
-## Installation
-
-```bash
-npm install
-poetry install --no-root
-```
+Simply drag the "PDF Converter" block into your workspace and connect it with your PDF source. The tool handles everything from there, delivering your converted file right where you need it.

@@ -1,78 +1,50 @@
-# PDF Craft Cloud
+# PDF Craft 云
 
-基于云服务的 PDF 转换工具包，可将 PDF 文档转换为 EPUB 和 Markdown 格式。
+将您的 PDF 文档转换成更易于阅读、编辑和分享的格式。无论您想在电子阅读器上阅读 PDF，还是将其转换为可编辑的文本，PDF Craft 云都能自动为您完成转换。
 
-## 功能特性
+## 您可以做什么?
 
-- **PDF 转 EPUB**：将 PDF 文档转换为 EPUB 电子书格式
-- **PDF 转 Markdown**：将 PDF 文档转换为 Markdown 格式
-- **多种输入源**：支持本地文件和 URL 链接的 PDF
-- **自动化处理**：自动完成上传、转换和下载流程
+### 将 PDF 转换为电子书
+将任何 PDF 文档转换为 EPUB 文件,这样您就可以在 Kindle、iPad 或任何电子阅读器上阅读。非常适合在旅途中阅读研究论文、报告或书籍。
 
-## 子流程
+### 将 PDF 转换为可编辑文本
+将 PDF 文档转换为 Markdown 格式,使您可以轻松编辑内容、提取信息或将文本用于自己的项目。非常适合从文章中记笔记、为演示文稿改编内容或创建文档。
 
-### File PDF to EPUB
-将本地 PDF 文件转换为 EPUB 格式，自动完成上传和下载。
+## 如何使用
 
-**输入：**
-- `file`：本地 PDF 文件路径
-- `saved_path`：EPUB 输出路径（可选）
+PDF Craft 云提供了一个简单的"PDF 转换器"工具,它能完成所有复杂的工作:
 
-**输出：**
-- `saved_path`：下载的 EPUB 文件路径
+1. **指定您的 PDF**: 告诉它您的 PDF 在哪里 - 可以提供网页链接,也可以从您的电脑上传文件
+2. **选择格式**: 选择您想要 EPUB 电子书还是 Markdown 文本文件
+3. **让它运行**: 转换器自动处理一切 - 它会处理您的 PDF 并返回转换后的文件
 
-### URL PDF to EPUB
-通过云服务将 URL 链接的 PDF 转换为 EPUB 格式。
+就是这样!无需担心复杂的步骤或设置。
 
-**输入：**
-- `pdf_url`：PDF 文件的 URL 地址
+## 常见使用方式
 
-**输出：**
-- `download_url`：转换后 EPUB 文件的下载链接
+**随时随地阅读**
+- 将冗长的 PDF 报告转换为 EPUB 格式
+- 传输到您的电子阅读器,随时随地舒适阅读
+- 享受比标准 PDF 更好的文本自动调整和字体大小控制
 
-### File PDF to Markdown
-将本地 PDF 文件转换为 Markdown 格式，自动完成上传和下载。
+**内容编辑和再利用**
+- 将 PDF 文章转换为可编辑的 Markdown 文本
+- 为您自己的文档提取和修改内容
+- 提取引用或段落而无需重新输入
 
-**输入：**
-- `file`：本地 PDF 文件路径
-- `saved_path`：Markdown 输出路径（可选）
+**文档处理工作流程**
+- 您可以考虑将其与文档整理工具一起使用,自动转换和归档 PDF
+- 如果您需要处理 PDF 内容,通常与文本分析工具配合使用效果很好
+- 可以与笔记系统结合使用,从 PDF 来源中捕获信息
 
-**输出：**
-- `saved_path`：下载的 Markdown 文件路径
+## 您需要什么
 
-### URL PDF to Markdown
-通过云服务将 URL 链接的 PDF 转换为 Markdown 格式。
+该工具与两个有用的辅助功能配合使用:
+- 在转换期间临时存储文件的方式
+- 用于检索已转换文件的下载器
 
-**输入：**
-- `pdf_url`：PDF 文件的 URL 地址
+这两者都在后台自动工作 - 您无需担心管理它们。
 
-**输出：**
-- `download_url`：转换后 Markdown 文件的下载链接
+## 开始使用
 
-## 任务模块
-
-| 任务 | 描述 |
-|------|------|
-| PDF to EPUB Submit | 提交 PDF URL 到转换服务并获取会话 ID |
-| PDF to Markdown Submit | 提交 PDF URL 到 Markdown 转换服务并获取会话 ID |
-| Poll PDF to EPUB Progress | 轮询转换进度，完成后返回下载链接 |
-| Poll PDF to Markdown Progress | 轮询转换进度，完成后返回下载链接 |
-
-## 使用方法
-
-1. **本地 PDF 文件**：使用 "File PDF to EPUB" 或 "File PDF to Markdown" 子流程
-2. **PDF URL 链接**：使用 "URL PDF to EPUB" 或 "URL PDF to Markdown" 子流程
-
-转换过程完全自动化 - 文件会被上传到云存储，通过云服务转换，然后下载到您指定的位置。
-
-## 依赖
-
-- `upload-to-cloud`：云存储上传功能
-- `downloader`：文件下载功能
-
-## 安装
-
-```bash
-npm install
-poetry install --no-root
-```
+只需将"PDF 转换器"模块拖入您的工作区,并将其与您的 PDF 来源连接。该工具会处理从此开始的所有事情,将转换后的文件直接送到您需要的地方。
