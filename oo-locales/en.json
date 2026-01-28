@@ -8,5 +8,7 @@
   "pdf-converter-model": "Conversion model identifier",
   "pdf-converter-poll-interval": "Seconds between progress checks",
   "pdf-converter-max-attempts": "Maximum progress check attempts before timeout",
+  "pdf-converter-ignore-pdf-errors": "Ignore PDF parsing errors to continue conversion",
+  "pdf-converter-ignore-ocr-errors": "Ignore OCR errors to continue conversion",
   "pdf-converter-download-url": "URL to download the converted file"
 }

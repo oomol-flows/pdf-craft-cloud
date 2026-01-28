@@ -46,6 +46,20 @@ inputs_def:
     value: 2400
     nullable: true
 
+  - handle: ignore_pdf_errors
+    description: "%pdf-converter-ignore-pdf-errors%"
+    json_schema:
+      type: boolean
+    value: true
+    nullable: true
+
+  - handle: ignore_ocr_errors
+    description: "%pdf-converter-ignore-ocr-errors%"
+    json_schema:
+      type: boolean
+    value: true
+    nullable: true
+
 outputs_def:
   - handle: download_url
     description: "%pdf-converter-download-url%"

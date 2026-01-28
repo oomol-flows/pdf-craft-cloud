@@ -6,6 +6,8 @@ class Inputs(typing.TypedDict):
     model: str | None
     poll_interval: float | None
     max_attempts: float | None
+    ignore_pdf_errors: bool | None
+    ignore_ocr_errors: bool | None
 class Outputs(typing.TypedDict):
     download_url: typing.NotRequired[str]
 #endregion
@@ -22,6 +24,12 @@ async def main(params: Inputs, context: Context) -> Outputs:
     model = params.get("model") or "gundam"
     poll_interval = params.get("poll_interval") or 3
     max_attempts = params.get("max_attempts") or 2400
+    ignore_pdf_errors = params.get("ignore_pdf_errors")
+    if ignore_pdf_errors is None:
+        ignore_pdf_errors = True
+    ignore_ocr_errors = params.get("ignore_ocr_errors")
+    if ignore_ocr_errors is None:
+        ignore_ocr_errors = True
 
     token = await context.oomol_token()
 
@@ -48,7 +56,9 @@ async def main(params: Inputs, context: Context) -> Outputs:
                     },
                     json={
                         "pdfURL": pdf_url,
-                        "model": model
+                        "model": model,
+                        "ignore_pdf_errors": ignore_pdf_errors,
+                        "ignore_ocr_errors": ignore_ocr_errors
                     }
                 )
 

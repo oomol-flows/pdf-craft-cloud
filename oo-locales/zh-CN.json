@@ -1,12 +1,14 @@
 {
   "display-name": "PDF Craft 云",
-  "description": "自动将 PDF 文档转换为易于阅读的电子书或可编辑的文本格式，非常适合随时随地阅读或重新利用内容",
+  "description": "自动将 PDF 文档转换为易于阅读的电子书或可编辑的文本格式,非常适合随时随地阅读或重新利用内容",
   "pdf-converter-title": "PDF 转换器",
-  "pdf-converter-description": "将 PDF 文件转换为 Markdown 或 EPUB 格式，自动处理并监控进度",
+  "pdf-converter-description": "将 PDF 文件转换为 Markdown 或 EPUB 格式,自动处理并监控进度",
   "pdf-converter-pdf-url": "要转换的 PDF 文件的 URL",
-  "pdf-converter-output-format": "所需的输出格式（Markdown 或 EPUB）",
+  "pdf-converter-output-format": "所需的输出格式(Markdown 或 EPUB)",
   "pdf-converter-model": "转换模型标识符",
   "pdf-converter-poll-interval": "进度检查之间的秒数",
   "pdf-converter-max-attempts": "超时前的最大进度检查次数",
+  "pdf-converter-ignore-pdf-errors": "忽略 PDF 解析错误以继续转换",
+  "pdf-converter-ignore-ocr-errors": "忽略 OCR 错误以继续转换",
   "pdf-converter-download-url": "下载已转换文件的 URL"
 }

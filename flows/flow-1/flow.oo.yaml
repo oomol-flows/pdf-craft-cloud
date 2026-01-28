@@ -1,6 +1,6 @@
 nodes:
   - node_id: pdf-converter#1
-    title: "pdf-converter"
+    title: "dasd"
     inputs_from:
       - handle: pdf_url
         from_node:
