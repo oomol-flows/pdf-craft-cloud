@@ -1,4 +1,4 @@
-version: 0.0.2
+version: 0.0.3
 scripts:
   bootstrap: |
     npm install
@@ -10,4 +10,8 @@ name: pdf_craft_cloud
 displayName: "%display-name%"
 description: "%description%"
 repository: https://github.com/oomol-flows/pdf-craft-cloud.git
-releaseNotes: init
+releaseNotes: |
+  - Added error handling options for PDF parsing and OCR failures
+  - Enhanced PDF conversion workflow with progress monitoring
+  - Improved localization support for UI descriptions
+  - Updated documentation for better clarity and user focus
