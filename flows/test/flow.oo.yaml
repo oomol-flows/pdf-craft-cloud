@@ -2,3 +2,8 @@ nodes:
   - node_id: pdf-to-epub#1
     title: "%pdf-epub-1%"
     subflow: self::pdf-to-epub
+    inputs_from:
+      - handle: file
+        value: /oomol-driver/desktop/2512.13084v1.pdf
+      - handle: output_format
+        value: epub

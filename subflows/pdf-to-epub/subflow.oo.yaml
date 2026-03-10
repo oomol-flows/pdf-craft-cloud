@@ -18,6 +18,8 @@ nodes:
             output_handle: remote_url
       - handle: output_format
         value: markdown
+        from_flow:
+          - input_handle: output_format
       - handle: model
         value: gundam
       - handle: poll_interval
@@ -31,13 +33,26 @@ nodes:
     task: self::pdf-converter
 inputs_def:
   - handle: file
+    description: "%local-file-path-to-upload-to-cloud-storage%"
     json_schema:
       type: string
       ui:widget: file
-    nullable: false
-    description: "%local-file-path-to-upload-to-cloud-storage%"
     value: /oomol-driver/desktop/2512.13084v1.pdf
+    nullable: false
     executor_name: nodejs
+  - handle: output_format
+    json_schema:
+      enum:
+        - markdown
+        - epub
+      ui:options:
+        labels:
+          - Markdown
+          - EPUB
+    nullable: false
+    description: "%pdf-converter-output-format%"
+    value: epub
+    executor_name: python
 outputs_def:
   - handle: download_url
     json_schema:

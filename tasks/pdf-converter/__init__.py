@@ -42,6 +42,7 @@ async def main(params: Inputs, context: Context) -> Outputs:
         result_url_template = "https://fusion-api.oomol.com/v1/pdf-transform-markdown/result/{}"
 
     # Step 1: Submit conversion request
+    context.report_progress(0)  # Report initial progress
     max_retries = 3
     session_id = None
 
@@ -71,6 +72,7 @@ async def main(params: Inputs, context: Context) -> Outputs:
                 if not session_id:
                     raise Exception("No session ID returned from API")
 
+                context.report_progress(5)  # Report submission complete
                 break
 
         except (httpx.ConnectError, httpx.TimeoutException) as e:
@@ -85,6 +87,7 @@ async def main(params: Inputs, context: Context) -> Outputs:
     result_url = result_url_template.format(session_id)
     headers = {"Authorization": token}
     attempts = 0
+    last_reported_progress = 5  # Start from 5% after submission
 
     async with httpx.AsyncClient(timeout=30.0) as client:
         while attempts < max_attempts:
@@ -102,8 +105,14 @@ async def main(params: Inputs, context: Context) -> Outputs:
                 state = data.get("state", "processing")
                 api_progress = data.get("progress", 0)
 
-                # Report progress (keeping 99 as max until completed)
-                context.report_progress(min(api_progress, 99))
+                # Map API progress to 5-99 range (reserve 100 for completion)
+                # API progress is typically 0-100, we map it to 5-99
+                mapped_progress = 5 + int(api_progress * 0.94)
+                
+                # Only report if progress increased
+                if mapped_progress > last_reported_progress:
+                    last_reported_progress = mapped_progress
+                    context.report_progress(mapped_progress)
 
                 if state == "completed":
                     context.report_progress(100)
