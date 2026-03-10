@@ -15,6 +15,5 @@
   "pdf-converter-ignore-ocr-errors": "Ignore OCR errors to continue conversion",
   "pdf-converter-download-url": "URL to download the converted file",
   "local-file-path-to-upload-to-cloud-storage": "Local file path to upload to cloud storage",
-  "pdf-epub-1": "PDF to Epub #1",
   "pdf-3": "PDF Converter #3"
 }

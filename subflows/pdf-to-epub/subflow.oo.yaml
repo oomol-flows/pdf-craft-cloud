@@ -37,7 +37,6 @@ inputs_def:
     json_schema:
       type: string
       ui:widget: file
-    value: /oomol-driver/desktop/2512.13084v1.pdf
     nullable: false
     executor_name: nodejs
   - handle: output_format
