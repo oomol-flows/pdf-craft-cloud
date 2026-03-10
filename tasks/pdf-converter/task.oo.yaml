@@ -19,7 +19,7 @@ inputs_def:
         labels:
           - Markdown
           - EPUB
-    value: markdown
+    value: epub
     nullable: false
 
   - group: Advanced Options
@@ -71,3 +71,4 @@ executor:
   options:
     entry: __init__.py
     spawn: false
+private: false

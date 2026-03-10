@@ -1,6 +1,9 @@
 {
+  "1": "Upload file to the cloud #1",
   "display-name": "PDF Craft Cloud",
   "description": "Transform PDF documents into easy-to-read e-books or editable text formats automatically, perfect for reading on the go or repurposing content",
+  "pdf-to-epub-title": "PDF to EPUB",
+  "pdf-to-epub-description": "Uploads a local PDF file to cloud storage and converts it to Markdown or EPUB format",
   "pdf-converter-title": "PDF Converter",
   "pdf-converter-description": "Converts PDF files to Markdown or EPUB format with automatic processing and progress monitoring",
   "pdf-converter-pdf-url": "URL of the PDF file to convert",
@@ -10,5 +13,8 @@
   "pdf-converter-max-attempts": "Maximum progress check attempts before timeout",
   "pdf-converter-ignore-pdf-errors": "Ignore PDF parsing errors to continue conversion",
   "pdf-converter-ignore-ocr-errors": "Ignore OCR errors to continue conversion",
-  "pdf-converter-download-url": "URL to download the converted file"
+  "pdf-converter-download-url": "URL to download the converted file",
+  "local-file-path-to-upload-to-cloud-storage": "Local file path to upload to cloud storage",
+  "pdf-epub-1": "PDF to Epub #1",
+  "pdf-3": "PDF Converter #3"
 }
