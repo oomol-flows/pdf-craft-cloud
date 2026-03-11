@@ -46,6 +46,12 @@ The converter includes intelligent features that work automatically in the backg
 - Can be combined with note-taking systems to capture information from PDF sources
 - Works nicely with cloud storage services to save your converted files automatically
 
+### Translate Your EPUB Books
+- After converting PDFs to EPUB, you can translate them into different languages
+- Use the companion package **books-translator** with the **book-translator** block
+- Perfect for reading foreign language documents in your preferred language
+- Seamlessly integrates with your PDF-to-EPUB workflow
+
 ## Practical Examples
 
 **Research Student**: Convert academic papers from PDF to Markdown for easier note-taking and citation management.

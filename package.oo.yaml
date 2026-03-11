@@ -1,4 +1,4 @@
-version: 0.0.5
+version: 0.0.6
 scripts:
   bootstrap: |
     npm install
@@ -15,3 +15,4 @@ releaseNotes: |
   - Enhanced PDF conversion workflow with progress monitoring
   - Improved localization support for UI descriptions
   - Updated documentation for better clarity and user focus
+  - Added companion translation workflow: use books-translator package to translate EPUB outputs
