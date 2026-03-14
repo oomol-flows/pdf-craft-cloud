@@ -1,10 +1,10 @@
-version: 0.0.7
+version: 0.0.8
 scripts:
   bootstrap: |
     npm install
     poetry install --no-root
 dependencies:
-  alicloud-oss: 0.0.3
+  alicloud-oss: 0.0.4
 icon: ./icon.png
 name: pdf_craft_cloud
 displayName: "%display-name%"
@@ -16,5 +16,5 @@ releaseNotes: |-
   - Improved localization support for UI descriptions
   - Updated documentation for better clarity and user focus
   - Added companion translation workflow: use books-translator package to translate EPUB outputs
-
   - mark blocks long_running
+  - update deps
