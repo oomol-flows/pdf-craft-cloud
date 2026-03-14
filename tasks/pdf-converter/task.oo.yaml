@@ -72,3 +72,4 @@ executor:
     entry: __init__.py
     spawn: false
 private: false
+long_running: true

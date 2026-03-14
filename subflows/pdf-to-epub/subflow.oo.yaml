@@ -64,3 +64,4 @@ outputs_from:
     from_node:
       - node_id: pdf-converter#3
         output_handle: download_url
+long_running: true
